@@ -11,9 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20141004114903) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "grilled_things", force: true do |t|
+    t.string   "recipe_name"
+    t.string   "recipe_url"
+    t.boolean  "would_grill_again"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
